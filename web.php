@@ -15,9 +15,10 @@ use App\Http\Controllers\newController;
 
 //new
 Route::get('/home','newController@home');
-Route::get('/home/ajax','newController@ajax');
 Route::get('/home/read','newController@read');
-Route::get('/home/coba','newController@fixtabel');
+Route::get('/home/search','newController@search');
+//Route::get('/home/ajax','newController@ajax')->name('cari');
+//Route::get('/home/coba','newController@fixtabel');
 //Route::get('/home/coba','newController@detail');
 
 Route::get('/', 'LoginControllers@login');

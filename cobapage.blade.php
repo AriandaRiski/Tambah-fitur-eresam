@@ -28,7 +28,10 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Detail Data</h3>
+                <br>
+                <a href="/home" class="btn btn-lg btn-primary">Back to Search</a>
               </div>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
