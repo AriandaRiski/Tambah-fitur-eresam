@@ -58,6 +58,19 @@ class newController extends Controller
             ]);
         }
     }
+	
+	  public function search(Request $request)
+    {
+          $code = $request->code;
+        $hasil = DB::table('detail_trs_wr as a')
+                ->select('a.bulan' , 'a.tarif' , 'a.status' , 'a.tgl_bayar' , 'b.code', 'b.nama')
+                ->leftJoin('wajib_retribusi as b','a.id_wr','=','b.id')
+              //  ->distinct('b.nama')
+        ->where('code','like','%'.$code.'%')->get();
+       
+        return view('cobapage',['code'=>$hasil]);
+    }
+
 
 
     //===============================DARI SINI SAMPE BAWAH GAK DI PAKE================================
